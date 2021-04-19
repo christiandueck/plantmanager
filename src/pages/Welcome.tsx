@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Image, StyleSheet, Text, SafeAreaView } from 'react-native';
+import { Image, StyleSheet, Text, SafeAreaView, Platform, StatusBar } from 'react-native';
 
 import wateringImg from '../assets/watering.png';
 import { Button } from '../components/Button';
@@ -36,7 +36,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0
   },
   title: {
     fontSize: 32,
