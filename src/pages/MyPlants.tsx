@@ -103,6 +103,7 @@ export function MyPlants() {
           showsVerticalScrollIndicator={false}
           contentContainerStyle={styles.flatList}
           ItemSeparatorComponent={() => <View style={{ height: 10 }} />}
+          ListFooterComponent={() => <View style={{ height: 20 }} />}
         />
       </View>
     </View>
