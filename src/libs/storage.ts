@@ -109,6 +109,8 @@ export async function removePlant(id: string): Promise<void> {
 
   await Notifications.cancelScheduledNotificationAsync(plants[id].notificationId);
 
+  console.log(plants, id);
+
   delete plants[id];
 
   await AsyncStorage.setItem(
